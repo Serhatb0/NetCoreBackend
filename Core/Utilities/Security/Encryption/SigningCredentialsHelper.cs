@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+
+namespace Core.Utilities.Security.Encryption // Şifreleme
+{
+    public class SigningCredentialsHelper // Kimlik Bilgileri Yardımcısı İmzalama
+    {
+        public static SigningCredentials CreateSigningCredentials(SecurityKey securityKey)
+        {
+            return new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha512Signature);
+        }
+
+    }
+}
